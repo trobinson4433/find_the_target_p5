@@ -48,6 +48,10 @@ class astronaut {
       this.fitness *= 10
     }
 
+    if (this.crashed == true) {
+      this.fitness /= 100
+    }
+
   }
   
     timeFit(target) {

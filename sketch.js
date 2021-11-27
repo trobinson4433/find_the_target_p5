@@ -3,7 +3,7 @@ var targ;
 var gen;
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(window.innerWidth, window.innerHeight);
   frameRate(100);
   translate(width/2,height-30);
   angleMode(DEGREES);
