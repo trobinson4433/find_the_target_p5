@@ -4,6 +4,8 @@ var gen;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
+  
+  textSize(32);
   frameRate(100);
   translate(width/2,height-30);
   angleMode(DEGREES);
@@ -18,6 +20,7 @@ function setup() {
 function draw() {
   translate(width/2,height-30);
   background(220);
+  text(gen.maxFit, width/4, -height/2);
   //c = createVector(random(-1,1),random(-1,1));
   //console.log(c);
   //rotate(c.heading());
