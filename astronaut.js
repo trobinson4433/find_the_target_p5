@@ -31,9 +31,9 @@ class astronaut {
     return babyAstro;
   }
   
-  mutation() {
+  mutation(frequency) {
     for (var i =0; i < this.lifespan; i++) {
-      if (random() < 0.01) {
+      if (random() < frequency) {
         this.directions[i] = createVector(random(-1,1),random(-1,1)).setMag(8);
       }
     }
@@ -54,7 +54,7 @@ class astronaut {
 
   }
   
-    timeFit(target) {
+  timeFit(target) {
     var d = dist(this.rockets.x, this.rockets.y, target.x, target.y);
     //this.fitness = 1000/(d**2);
     this.fitness = map(d, 0, width, width, 0);
