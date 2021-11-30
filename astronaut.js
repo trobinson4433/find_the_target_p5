@@ -41,7 +41,9 @@ class astronaut {
  
   
   howFit(target) {
-    var d = dist(this.rockets.x, this.rockets.y, target.x, target.y);
+    targx= target.getTargetCenterX();
+    targy = target.getTargetCenterY();
+    var d = dist(this.rockets.x, this.rockets.y, targx, targy);
     this.fitness = map(d, 0, width, width, 0);
     
     if (this.complete == true) {
@@ -55,7 +57,10 @@ class astronaut {
   }
   
   timeFit(target) {
-    var d = dist(this.rockets.x, this.rockets.y, target.x, target.y);
+    var targx = target.getTargetCenterX();
+    var targy = target.getTargetCenterY();
+    //console.log(targx)
+    var d = dist(this.rockets.x, this.rockets.y, targx, targy);
     //this.fitness = 1000/(d**2);
     this.fitness = map(d, 0, width, width, 0);
     if (this.complete == true) {

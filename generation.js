@@ -11,6 +11,8 @@ class generation {
     this.tempobs = tempobs
     this.matingPool = matingPool;
     this.temptarg = temptarg;
+    this.targx = this.temptarg.getTargetCenterX();
+    this.targy = this.temptarg.getTargetCenterY();
     this.fastest = lifespan
     this.champion =0
     this.maxFit = 0
@@ -33,7 +35,7 @@ class generation {
           pop();
           this.astros[i].rockets.collide(this.tempobs)
           this.astros[i].rockets.wallCrash();
-          if (dist(this.astros[i].rockets.x, this.astros[i].rockets.y, this.temptarg.x, this.temptarg.y) < 15) {
+          if (dist(this.astros[i].rockets.x, this.astros[i].rockets.y, this.targx, this.targy) < 15) {
             this.astros[i].complete = true;
             this.astros[i].time = this.count;
             if (this.astros[i].time < this.fastest) {
