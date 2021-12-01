@@ -19,7 +19,11 @@ class obstacle {
   
   show() {
     fill(50,50,50);
-    rect(this.x, this.y, this.width, this.height);
+    rect(this.#x, this.#y, this.#width, this.#height);
+  }
+
+  boundaries() {
+    return [this.lower, this.higher, this.left, this.right]
   }
   
 }
