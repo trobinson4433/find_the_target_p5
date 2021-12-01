@@ -79,5 +79,8 @@ class generation {
     }
   }
   
-    
+  getAverageFitness(){
+    return this.averagefitness
+  }
+
 }

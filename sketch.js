@@ -20,7 +20,8 @@ function setup() {
 function draw() {
   translate(width/2,height-30);
   background(220);
-  text(gen.maxFit, width/4, -height/2);
+  text('Max Fitness:' + gen.maxFit, width/4, -height/2);
+  text('Avg Fitness:' + gen.getAverageFitness(), width/4, -height/2+50)
   //c = createVector(random(-1,1),random(-1,1));
   //console.log(c);
   //rotate(c.heading());
