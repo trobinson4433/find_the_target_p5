@@ -9,11 +9,11 @@ class obstacle {
     this.#width = width;
     this.#height = height;
     
-    this.lower = this.#y + (this.#height/2);
-    this.higher = this.#y - (this.#height/2);
-    this.left = this.#x - (this.#width/2);
-    this.right = this.#x + (this.#width/2);
-    console.log(this.lower);
+    //this.lower = this.#y + (this.#height/2);
+    //this.higher = this.#y - (this.#height/2);
+    //this.left = this.#x - (this.#width/2);
+    //this.right = this.#x + (this.#width/2);
+    
    
   }
   
@@ -23,7 +23,11 @@ class obstacle {
   }
 
   boundaries() {
-    return [this.lower, this.higher, this.left, this.right]
+    var lower = this.#y + (this.#height/2);
+    var higher = this.#y - (this.#height/2);
+    var left = this.#x - (this.#width/2);
+    var right = this.#x + (this.#width/2);
+    return [lower, higher, left, right]
   }
   
 }

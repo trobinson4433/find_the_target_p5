@@ -27,7 +27,8 @@ class rocket {
   }
   
   collide(obstacle) {
-    if (this.y < obstacle.lower && this.x >obstacle.left && this.x < obstacle.right && this.y > obstacle.higher) {
+    var boundary = obstacle.boundaries()
+    if (this.y < boundary[0] && this.x > boundary[2] && this.x < boundary[3] && this.y > boundary[1]) {
       this.crashed = true;
     }
     
