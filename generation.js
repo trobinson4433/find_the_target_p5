@@ -35,7 +35,7 @@ class generation {
           pop();
           this.astros[i].rockets.collide(this.tempobs)
           this.astros[i].rockets.wallCrash();
-          if (dist(this.astros[i].rockets.x, this.astros[i].rockets.y, this.targx, this.targy) < 15) {
+          if (dist(this.astros[i].rockets.getPosition()[0], this.astros[i].rockets.getPosition()[1], this.targx, this.targy) < 15) {
             this.astros[i].complete = true;
             this.astros[i].time = this.count;
             if (this.astros[i].time < this.fastest) {
@@ -46,7 +46,7 @@ class generation {
           }
         } else {
           push();
-          translate(this.astros[i].rockets.x,this.astros[i].rockets.y);
+          translate(this.astros[i].rockets.getPosition()[0],this.astros[i].rockets.getPosition()[1]);
           this.astros[i].rockets.drawrock(this.astros[i].champion);
           pop();
         }
