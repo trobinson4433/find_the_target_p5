@@ -28,7 +28,7 @@ class generation {
   update() {
     if (this.count < this.lifespan) {
       for (var i = 0; i< this.population; i++) {
-        if (this.astros[i].complete == false && this.astros[i].rockets.crashed == false) {
+        if (this.astros[i].complete == false && this.astros[i].rockets.hasCrashed() == false) {
           push();
           this.astros[i].rockets.move(this.count);
           this.astros[i].rockets.drawrock();
