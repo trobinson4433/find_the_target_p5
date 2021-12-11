@@ -1,13 +1,11 @@
 class rocket {
   #directions
-  #lifespan
   #x
   #y
   #champion
   #crashed
-  constructor(directions, lifespan, champion) {
+  constructor(directions, champion) {
     this.#directions = directions;
-    this.lifespan = lifespan;
     this.x = 0;
     this.y = 0;
     this.champion = champion

@@ -14,7 +14,7 @@ class astronaut {
         this.directions.push(createVector(random(-1,1),random(-1,1)).setMag(8));
     }
     }
-    this.rockets = new rocket(this.directions, this.lifespan,this.champion);
+    this.rockets = new rocket(this.directions, this.champion);
   }
   
   
