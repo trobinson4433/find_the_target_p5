@@ -1,10 +1,11 @@
 class pool {
+  #mates
   constructor() {
-    this.mates = [];
+    this.#mates = [];
   }
   
   cleanse() {
-    this.mates = [];
+    this.#mates = [];
   }
   
   OnlytheBestSurvive(astros) {
@@ -14,12 +15,19 @@ class pool {
     }
     gen.averagefitness = totalFitness/astros.length
   }
+
   addToPool(astro, averageFitness) {
     if (astro.fitness >= averageFitness) {
       var duplicates = 1 + floor(astro.fitness);
       for (var i = 0; i < duplicates; i++) {
-        this.mates.push(astro);
+        this.#mates.push(astro);
       }
     }
   }
+
+  getMates() {
+    return this.#mates
+  }
+
+
 }

@@ -67,7 +67,7 @@ class generation {
       }
       
       for (var j = 0; j < this.population; j++) {
-        var baby = this.astros[j].breed(random(this.matingPool.mates));
+        var baby = this.astros[j].breed(random(this.matingPool.getMates()));
         baby.mutation(0.01);
         this.astros[j] = baby
       }
