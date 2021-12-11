@@ -31,7 +31,7 @@ class generation {
         if (this.astros[i].complete == false && this.astros[i].rockets.hasCrashed() == false) {
           push();
           this.astros[i].rockets.move(this.count);
-          this.astros[i].rockets.drawrock();
+          this.astros[i].rockets.drawrock(this.astros[i].champion);
           pop();
           this.astros[i].rockets.collide(this.tempobs)
           this.astros[i].rockets.wallCrash();
@@ -47,7 +47,7 @@ class generation {
         } else {
           push();
           translate(this.astros[i].rockets.x,this.astros[i].rockets.y);
-          this.astros[i].rockets.drawrock();
+          this.astros[i].rockets.drawrock(this.astros[i].champion);
           pop();
         }
       }

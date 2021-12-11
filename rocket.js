@@ -2,19 +2,17 @@ class rocket {
   #directions
   #x
   #y
-  #champion
   #crashed
-  constructor(directions, champion) {
+  constructor(directions) {
     this.#directions = directions;
     this.x = 0;
     this.y = 0;
-    this.champion = champion
     this.#crashed = false
   }
   
   
-  drawrock() {
-    if (this.champion == true) {
+  drawrock(champs) {
+    if (champs == true) {
       fill(100,204,100);
       rect(0,0,10,20);
     } else {
